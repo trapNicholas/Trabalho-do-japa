@@ -1,0 +1,90 @@
+/* Reset básico para tirar margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cores principais: Preto e Branco */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Configuração do Menu */
+header {
+    background-color: #111;
+    padding: 1rem 0;
+    position: fixed; /* Faz o menu ficar parado no topo */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #888; /* Muda de cor ao passar o mouse */
+}
+
+/* Estilização das Seções (Slides) */
+.content-section {
+    min-height: 100vh; /* Cada "slide" ocupa a tela inteira */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+h2 { font-size: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid white; display: inline-block; }
+ul { text-align: left; margin-top: 20px; }
+li { margin-bottom: 10px; font-size: 1.2rem; }
+
+/* Botão Interativo */
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Esconde o menu em telas muito pequenas para simplificar */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+}
