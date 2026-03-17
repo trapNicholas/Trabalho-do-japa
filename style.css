@@ -1,90 +1,95 @@
-/* Reset básico para tirar margens padrão do navegador */
+/* Reset básico para tirar margens indesejadas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Cores principais: Preto e Branco */
 body {
-    background-color: #000000;
-    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-/* Configuração do Menu */
+/* Cabeçalho e Navegação */
 header {
-    background-color: #111;
-    padding: 1rem 0;
-    position: fixed; /* Faz o menu ficar parado no topo */
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #333;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 1rem 5%;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.nav-links {
+nav ul {
     display: flex;
     list-style: none;
 }
 
-.nav-links li {
-    margin: 0 15px;
+nav ul li {
+    margin-left: 20px;
 }
 
-.nav-links a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Corpo do Site */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    background-color: #fff;
+    color: #6e8efb;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #888; /* Muda de cor ao passar o mouse */
+.btn-principal:hover {
+    transform: scale(1.05);
+    background-color: #eee;
 }
 
-/* Estilização das Seções (Slides) */
-.content-section {
-    min-height: 100vh; /* Cada "slide" ocupa a tela inteira */
+/* Cards de Conteúdo */
+.conteudo {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    text-align: center;
-    border-bottom: 1px solid #222;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-h1 { font-size: 3rem; margin-bottom: 1rem; }
-h2 { font-size: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid white; display: inline-block; }
-ul { text-align: left; margin-top: 20px; }
-li { margin-bottom: 10px; font-size: 1.2rem; }
-
-/* Botão Interativo */
-button {
+.card {
     background: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 20px;
-    font-weight: bold;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Responsividade para Celulares */
-@media (max-width: 768px) {
-    .nav-links { display: none; } /* Esconde o menu em telas muito pequenas para simplificar */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.8rem; }
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
 }
